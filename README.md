@@ -1,23 +1,39 @@
 # Loomspace
 
-A glassy spatial chat canvas for working in a primary context stream with side streams you can stitch back in when they matter.
+A glassy spatial workspace for side streams you can stitch back into the main line.
 
-## Core idea
+## What’s in this slice
 
-- **Loom** = a project workspace
-- **Warp** = the primary stream
-- **Threads** = side streams
-- **Stitches** = promoted request/response pairs
-- **MemPalace** = the underlying memory fabric
+- React + TypeScript app shell
+- local event log persisted in `localStorage`
+- draggable canvas nodes
+- typed links for supports / promotes / contradicts / links
+- provenance inspector for every selected node
+- density overlay + basic fabric metrics
+- thread spawn, stitch promotion, contradiction marking
 
-## First brush strokes
+## Run
 
-- per-project looms
-- per-category threads
-- selective promotion into the primary stream
-- context saturation / density visualization
-- local-first memory backing
+```bash
+npm install
+npm run dev
+```
 
-## License
+## Build
 
-Apache-2.0
+```bash
+npm run build
+```
+
+## Model
+
+- **Loom**: workspace
+- **Warp**: primary stream
+- **Thread**: side stream
+- **Stitch**: promoted pair or decision anchor
+- **Evidence**: provenance-bearing node
+- **Fabric**: the graph and its visible state
+
+## Design rule
+
+If an object exists, the inspector should be able to answer why.
